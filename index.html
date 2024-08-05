@@ -1,55 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <script>
-        const random = Math.random();
-       let num = Math.floor(random*3);
-       play();
-    function play(){
-        const rounds= prompt("Enter the number of round you want to play");
-    for(i=1;i<=rounds;i++){
-        const inp = prompt("Enter rock/paper/scissor");
-        let compchoice=comp(num);
-        console.log(compchoice);
-        function comp(num){
-if(num==0){
- return "rock";
-}
-else if(num==1){
-    return "paper";
-}
-else{
-    return "scissor";
-}
+  </head>
+  <body>
+    <div class="inp">
+      How many rounds?<br />
+      <input type="text" id="input" />
+      <br />
+      <button id="btn-1">Submit</button>
+      <br />
+      Enter Rock/Paper/Scissors<br />
+      <input type="text" id="input2" />
+      <br />
+      <button id="btn-1">Submit</button>
+    </div>
 
-        }
-
-      if(compchoice==inp){
-        console.log("It's a draw");
-      }
-      else if(inp=="rock" && compchoice=="scissor" || inp=="paper" && compchoice=="rock" || inp=="scissor" && compchoice=="paper"){
-console.log("You won")
-
-}
-else{
-    console.log("You lost");
-}
-}
-    }
-   
- let decision= prompt("Do you wanna play again?");
-
-   if(decision=="yes"){
-    play();
-}
-else{
-    console.log("Have a good day!");
-}
-    </script>
-</body>
+    <div id="score">
+      <h1>Human Score: <span id="score-value">0</span></h1>
+      <h1>Computer Score: <span id="computer-score-value">0</span></h1>
+    </div>
+    <div id="result">
+      <h1 id="final-result">You won</h1>
+    </div>
+  </body>
 </html>

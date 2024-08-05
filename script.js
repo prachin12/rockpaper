@@ -1,5 +1,4 @@
-
-        const random = Math.random();
+const random = Math.random();
        let num = Math.floor(random*3);
        play();
     function play(){
