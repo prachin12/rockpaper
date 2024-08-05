@@ -12,44 +12,19 @@ let cs=0;
 
 btn.addEventListener('click', function(){
 r = rounds.value;
+console.log(r);
 });
 
 btn1.addEventListener('click', function(){
 d = decision.value;
-const random = Math.random();
-       let num = Math.floor(random*3);
-       play();
-    function play(){
-    for(i=1;i<=r;i++){
-        let compchoice=comp(num);
-        function comp(num){
-if(num==0){
- return "rock";
-}
-else if(num==1){
-    return "paper";
-}
-else{
-    return "scissor";
-}
-
-        }
-
-      if(compchoice==d){
-        console.log("It's a draw");
-      }
-      else if(d=="rock" && compchoice=="scissor" || d=="paper" && compchoice=="rock" || d=="scissor" && compchoice=="paper"){
-hs++;
-
-}
-else{
-    cs++;
-}
-}
-    }
-    hScore.innerHTML=hs;
-    cScore.innerHTML=cs;
-   
-
+console.log(d);
+let creturn= play(d);
 });
+
+function play(d){
+let num= Math.floor(Math.random()*3);
+if(num==0){cDecision.innerText='rock';}
+else if(num==1){cDecision.innerText='paper';}
+else{cDecision.innerText='scissors';}
+}
 
