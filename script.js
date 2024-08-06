@@ -92,7 +92,7 @@ function winner(d,creturn,r)
 
     
 console.log(r);
-    if(r==0)
+    if(r<=0)
     {
         if(hs>cs)
         {
@@ -106,6 +106,12 @@ console.log(r);
         {
             alert('Game is a tie');
         }
+        rounds.value='';
+        decision.value='';
+        hScore.innerText='0';
+        cScore.innerText='0';
+        hs='0';
+        cs='0';
         
     }
     
